@@ -8,6 +8,9 @@ import {
 import {
   CounterProvider
 } from "./components/context_api/CounterProvider.tsx";
+import {
+  CounterZustand
+} from "./components/zustand/CounterZustand.tsx";
 
 function App() {
   return (
@@ -17,7 +20,9 @@ function App() {
         <CounterUseContext title="CounterUseContext" />
         <CounterUseState title="Counter with useState inside the Context (not rerender if counter above updates)" />
         <CounterUseContext title="CounterUseContext" />
+        <CounterZustand title="Zustand inside useContext" />
       </CounterProvider>
+      <CounterZustand title="Zustand" />
     </>
   )
 }
